@@ -1,14 +1,14 @@
 module.exports = {
   supabase: {
-    url: 'https://inuzmvgfqhgptygmtcsh.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImludXptdmdmcWhncHR5Z210Y3NoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE0MDA5MTgsImV4cCI6MjA3Njk3NjkxOH0.co0Bm51dFmNzNghC5xJfNs6zzPgmurd-MU_irxzLFHg',
-    serviceKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImludXptdmdmcWhncHR5Z210Y3NoIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MTQwMDkxOCwiZXhwIjoyMDc2OTc2OTE4fQ.REPLACE_WITH_REAL_SERVICE_ROLE_KEY'
+    url: process.env.SUPABASE_URL || 'https://cnmwpaogauwvtezikmln.supabase.co',
+    anonKey: process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNubXdwYW9nYXV3dnRlemlrbWxuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2NDE2NzAsImV4cCI6MjA3NzIxNzY3MH0.xccZcPiFvpbLbi-dsYvS3f3p4Hqhh-xvHq4_ImaBpGU',
+    serviceKey: process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNubXdwYW9nYXV3dnRlemlrbWxuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MTY0MTY3MCwiZXhwIjoyMDc3MjE3NjcwfQ.X03Ic-EZETA-nyWfjiE0dVVkcv6gK44KaMzXe96LKlo'
   },
   jwt: {
-    secret: 'adamazam_super_secret_jwt_key_2024_very_long_and_secure'
+    secret: process.env.JWT_SECRET || 'adamazam_super_secret_jwt_key_2024_very_long_and_secure'
   },
   server: {
-    port: 5000,
-    clientUrl: 'http://localhost:3000'
+    port: process.env.PORT || 5000,
+    clientUrl: process.env.CLIENT_URL || 'https://adamazamsite.vercel.app'
   }
 };
